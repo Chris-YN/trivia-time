@@ -1,5 +1,22 @@
 <div class="container">
-  <h2>WELCOME PAGE</h2>
+  <h2>WELCOME To Trivia FunTime!!</h2>
+  
+  <hr>
+
+  <label>Please enter your name</label>
+  <input 
+    type="text" 
+    #userNameInput
+  >
+
+  <hr>
+  
+  <button 
+    routerLink="/game-page"
+    (click)="onGameStart()"
+  >Start</button>
+
+  <hr>
 
   <ul class="aFlexParent">
     <li><a routerLink="/game-page">Game Page</a></li>

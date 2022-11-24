@@ -5,7 +5,7 @@
   <div class="gameContainer">
     <div class="questionContainer">
       <p>
-        {{triviaDataArr[currentQuestionIndex].question}}
+        {{questionsArr[currentQuestionIndex]}}
       </p>
     </div>
 
@@ -26,6 +26,11 @@
       </ul>
     </div>
 
+    <div class="righOrWrong">
+      <p *ngIf="wasCorrectCheck === 1">Yay! 🎉 +100 pts</p>
+      <p *ngIf="wasCorrectCheck === -1">Sorry! 😕 -50 pts</p>
+    </div>
+
     <button *ngIf="triviaEndMet === false; else scoreButton" routerLink="" (click)="onScoreButtonClick()">
       Restart
     </button>
@@ -33,6 +38,8 @@
     <ng-template #scoreButton>
       <button routerLink="/score-page" (click)="onScoreButtonClick()">See My Score</button>
     </ng-template>
+
+    <button [disabled]="currentQuestionIndex === triviaDataArr.length-1 " (click)="onSkipClick()">Skip Question</button>
 
     <hr>
 

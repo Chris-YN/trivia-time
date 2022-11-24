@@ -1,4 +1,5 @@
 import { Component, ContentChild } from '@angular/core';
+import { TriviaDataService } from './services/trivia-data.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,8 @@ export class AppComponent {
     console.log(name)
   }
 
+  constructor(private trivia:TriviaDataService){
+    this.trivia.getData().subscribe((data)=>{
+    })
+  }
 }

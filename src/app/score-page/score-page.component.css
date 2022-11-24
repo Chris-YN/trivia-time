@@ -1,0 +1,62 @@
+.scoreTopBand {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 2.5px solid #a80e3f;
+  padding: 3% 0;
+  color: white;
+  background-color: #4A154B;
+}
+
+.scoreBodyContainer {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom: 2px solid #4A154B; */
+}
+.scoreBodyContainer p{
+  font-size: 1.5rem;
+  color: rgb(78, 69, 69);
+}
+h2 span{
+  font-size: 2rem;
+}
+
+.scoreBottomBand {
+  height: 30px;
+  border-bottom: 2.5px solid #a80e3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restartButtonContainer {
+  background-color: #4A154B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 0;
+}
+
+.restartButtonContainer button {
+  width: 150px;
+  height: 30px;
+  background-color: rgb(245, 245, 245);
+  filter: drop-shadow(0 0 1.5px DF1E5A);
+  color: black;
+  border-radius: 4px;
+  border: none;
+}
+
+.restartButtonContainer button:hover {
+  background-color: #DF1E5A;
+  color: white;
+}
+
+@media (max-width: 795px){
+  .scoreBodyContainer{
+    height: 375px;
+  }
+}

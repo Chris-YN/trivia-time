@@ -1,0 +1,36 @@
+.outerCard {
+  width: 90%;
+  margin: 30px auto 0 auto;
+  border-radius: 13px;
+  background: white;
+  filter: drop-shadow(0 0 3px lightgrey);
+  background: rgb(249, 250, 241);
+  background: linear-gradient(180deg, rgb(251, 252, 246) 0%, rgb(255, 255, 255) 35%, rgb(248, 254, 255) 100%);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2.5px solid #a80e3f;
+  padding: 7% 0 4.5% 0;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  background-color: #36C4EE;
+}
+
+h1 {
+  color: white;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  font-size: .8rem;
+  color: white;
+  background-color:#371138;
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}

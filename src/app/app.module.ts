@@ -16,7 +16,7 @@ import { OptionClickEffectDirective } from './option-click-effect.directive';
     GamePageComponent,
     ScorePageComponent,
     WelcomePageComponent,
-    OptionClickEffectDirective
+    OptionClickEffectDirective,
   ],
   imports: [
     BrowserModule,

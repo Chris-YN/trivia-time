@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { TriviaDataService } from '../services/trivia-data.service';
 
 @Component({
   selector: 'app-game-page',
   templateUrl: './game-page.component.html',
-  styleUrls: ['./game-page.component.css']
+  styleUrls: ['./game-page.component.css'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class GamePageComponent implements OnInit {
   triviaDataArrLong: any;
@@ -73,6 +74,7 @@ export class GamePageComponent implements OnInit {
     } else {
       //if incorrectly answered
       this.wasCorrectCheck = -1;
+      this.currentScore -= 20;
       console.log("right answer was " + this.triviaDataArr[this.currentQuestionIndex].correct_answer)
       // if check to ensure currentQuestionIndex does not go over the las index of triviaDaraArr
       if (this.currentQuestionIndex === this.triviaDataArr.length - 1) {

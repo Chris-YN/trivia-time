@@ -1,54 +1,61 @@
-<div class="container">
-  <div>
-    <h2>Game Page</h2>
+<div class="gameContainer">
+  <div class="questionNumContainer">
+    <!-- question Counter -->
+    <p>Question {{currentQuestionIndex + 1}} / {{triviaDataArr.length}}</p>
   </div>
-  <div class="gameContainer">
+
+  <div class="questionsAndOptions">
+    <!-- questions -->
     <div class="questionContainer">
-      <p>
+      <h3>
         {{questionsArr[currentQuestionIndex]}}
-      </p>
+      </h3>
     </div>
 
-    <hr>
-
-    <div class="questionNumContainer">
-      <p>{{currentQuestionIndex + 1}} / {{triviaDataArr.length}}</p>
-    </div>
-
-    <hr>
-
+    <!-- options -->
     <div class="optionsContainer">
-      <ul *ngFor="let option of OptionsArr[currentQuestionIndex]">
-        <li class="option" [ngClass]="{disabled: triviaEndMet === true, btnEffect: triviaEndMet === false}">
-          <button [disabled]="triviaEndMet === true" (click)="OnOptionClick($event)">{{option}}
+      <ul>
+        <li class="option" *ngFor="let option of OptionsArr[currentQuestionIndex]">
+          <button 
+          [ngClass]="{disabled: triviaEndMet === true, btnEffect: triviaEndMet === false}"
+          [disabled]="triviaEndMet === true" (click)="OnOptionClick($event)">{{option}}
           </button>
         </li>
       </ul>
     </div>
+  </div>
 
-    <div class="righOrWrong">
-      <p *ngIf="wasCorrectCheck === 1">Yay! 🎉 +100 pts</p>
-      <p *ngIf="wasCorrectCheck === -1">Sorry! 😕 -50 pts</p>
-    </div>
 
-    <button *ngIf="triviaEndMet === false; else scoreButton" routerLink="" (click)="onScoreButtonClick()">
+  <!-- answer check -->
+  <div class="righOrWrong">
+    <p *ngIf="wasCorrectCheck === 1">Yay! 🎉 +100 pts</p>
+    <p *ngIf="wasCorrectCheck === -1">Sorry! 😕 -20 pts</p>
+  </div>
+
+  <!-- nav buttons -->
+  <div class="navButtonsContainer">
+    <button class="navButtonL navButtonHoverTarget" *ngIf="triviaEndMet === false; else scoreButton" routerLink="" (click)="onScoreButtonClick()">
       Restart
     </button>
 
     <ng-template #scoreButton>
-      <button routerLink="/score-page" (click)="onScoreButtonClick()">See My Score</button>
+      <button [ngClass]="{highlight: triviaEndMet === true}" class="navButtonL" routerLink="/score-page" (click)="onScoreButtonClick()">See My Score</button>
     </ng-template>
 
-    <button [disabled]="currentQuestionIndex === triviaDataArr.length-1 " (click)="onSkipClick()">Skip Question</button>
-
-    <hr>
-
-    <ul class="aFlexParent">
-      <li><a routerLink="/game-page">Game Page</a></li>
-      <li><a routerLink="/">Welcome Page</a></li>
-      <li><a routerLink="/score-page">Score Page</a></li>
-    </ul>
+    <button 
+    class="navButtonR" 
+    [disabled]="currentQuestionIndex === triviaDataArr.length-1"
+    [ngClass]="{greyout: currentQuestionIndex === triviaDataArr.length-1}"
+    (click)="onSkipClick()">Skip Question</button>
   </div>
 
 
-</div>
+  <!-- delete later -->
+  <!-- <hr>
+
+  <ul class="aFlexParent">
+    <li><a routerLink="/game-page">Game Page</a></li>
+    <li><a routerLink="/">Welcome Page</a></li>
+    <li><a routerLink="/score-page">Score Page</a></li>
+  </ul>
+</div> -->

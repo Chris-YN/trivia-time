@@ -1,14 +1,35 @@
-<div class="container">
-  <h2>{{storedUserName}} YOUR SCORE is {{storedUserScore}}}!!</h2>
-  <p>That is just wow</p>
+<div class="scoreTopBand">
+  <!-- <p>😎 lets see how you did 😎</p> -->
+  <p>lets see how you did..</p>
+</div>
 
-  <button routerLink="/">Give it another try</button>
+<div class="scoreBodyContainer">
+  <h2><span>{{storedUserName}}</span></h2>
+  <h2>YOUR SCORE is <span>{{storedUserScore}}!!</span></h2>
+  
+  <p *ngIf="storedUserScore === 1000">How?? How did you get to be so good?</p>
+  <p *ngIf="storedUserScore > 800 && storedUserScore < 1000">Wow. just Wow</p>
+  <p *ngIf="storedUserScore > 600 && storedUserScore <= 800">Yay! you did so well</p>
+  <p *ngIf="storedUserScore > 500 && storedUserScore <=600 ">You did this before huh?</p>
+  <p *ngIf="storedUserScore <= 500 ">Better luck next time!</p>
+</div>
 
-  <hr>
+<div class="scoreBottomBand">
+</div>
+
+<div class="restartButtonContainer">
+  <button class="restarButton" routerLink="/">Give it another try</button>
+</div>
+
+
+
+
+
+<!-- <hr>
 
   <ul class="aFlexParent">
     <li><a routerLink="/game-page">Game Page</a></li>
     <li><a routerLink="/">Welcome Page</a></li>
     <li><a routerLink="/score-page">Score Page</a></li>
   </ul>
-</div>
+</div> -->

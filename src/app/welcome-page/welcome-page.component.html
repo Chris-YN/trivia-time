@@ -1,26 +1,21 @@
 <div class="container">
-  <h2>WELCOME To Trivia FunTime!!</h2>
-  
-  <hr>
-
-  <label>Please enter your name</label>
-  <input 
-    type="text" 
-    [(ngModel)]="userInput"
-  >
-
-  <hr>
-  
-  <button 
-    routerLink="/game-page"
-    (click)="onGameStart()"
-  >Start</button>
-
-  <hr>
-
-  <ul class="aFlexParent">
+  <div class="welcomeBand">
+    <p>WELCOME To Trivia FunTime!!</p>
+  </div>
+  <div class="welcomeBodyContainer">
+    <div class="inputContainer">
+      <p>Please enter your name and click start</p>
+      <input type="text" [(ngModel)]="userInput">
+    </div>
+  </div>
+  <div class="welcomeBottomBand">
+  </div>
+  <div class="startButtonContainer">
+    <button routerLink="/game-page" (click)="onGameStart()">Start</button>
+  </div>
+  <!-- <ul class="aFlexParent">
     <li><a routerLink="/game-page">Game Page</a></li>
     <li><a routerLink="/">Welcome Page</a></li>
     <li><a routerLink="/score-page">Score Page</a></li>
-  </ul>
+  </ul> -->
 </div>

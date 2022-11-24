@@ -9,6 +9,8 @@ export class ScorePageComponent implements OnInit {
 
   storedUserName:string;
   storedUserScore:any;
+
+
   constructor() { }
 
   ngOnInit(): void {

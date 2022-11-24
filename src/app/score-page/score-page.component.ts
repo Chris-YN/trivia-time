@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScorePageComponent implements OnInit {
 
+  storedUserName:string;
+  storedUserScore:any;
   constructor() { }
 
   ngOnInit(): void {
+    this.storedUserName=localStorage.getItem("userName")!;
+    this.storedUserScore = localStorage.getItem("userScore")!;
   }
+  
 
 }

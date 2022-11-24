@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { GamePageComponent } from './game-page/game-page.component';
 import { ScorePageComponent } from './score-page/score-page.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OptionClickEffectDirective } from './option-click-effect.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     GamePageComponent,
     ScorePageComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    OptionClickEffectDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

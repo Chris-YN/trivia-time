@@ -1,0 +1,125 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which movie released in 2016 features Superman and Batman fighting?",
+      "correct_answer": "Batman v Superman: Dawn of Justice",
+      "incorrect_answers": [
+        "Batman v Superman: Superapocalypse",
+        "Batman v Superman: Black of Knight",
+        "Batman v Superman: Knightfall"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who starred as Bruce Wayne and Batman in Tim Burton&#039;s 1989 movie &quot;Batman&quot;?",
+      "correct_answer": "Michael Keaton",
+      "incorrect_answers": [
+        "George Clooney",
+        "Val Kilmer",
+        "Adam West"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who directed &quot;E.T. the Extra-Terrestrial&quot; (1982)?",
+      "correct_answer": "Steven Spielberg",
+      "incorrect_answers": [
+        "Stanley Kubrick",
+        "James Cameron",
+        "Tim Burton"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of these movies did Jeff Bridges not star in?",
+      "correct_answer": "The Hateful Eight",
+      "incorrect_answers": [
+        "Tron: Legacy",
+        "The Giver",
+        "True Grit"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the oldest Disney film?",
+      "correct_answer": "Snow White and the Seven Dwarfs",
+      "incorrect_answers": [
+        "Pinocchio",
+        "Dumbo",
+        "Fantasia"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "The 2002 film &quot;28 Days Later&quot; is mainly set in which European country?",
+      "correct_answer": "United Kingdom",
+      "incorrect_answers": [
+        "France",
+        "Italy",
+        "Germany"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In the 1992 film &quot;Army of Darkness&quot;, what name does Ash give to his double-barreled shotgun?",
+      "correct_answer": "Boomstick",
+      "incorrect_answers": [
+        "Bloomstick",
+        "Blastbranch",
+        "2-Pump Chump"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Who directed the Kill Bill movies?",
+      "correct_answer": "Quentin Tarantino",
+      "incorrect_answers": [
+        "Arnold Schwarzenegger",
+        "David Lean",
+        "Stanley Kubrick"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In &quot;ALF&quot;, what was ALF&#039;s real name?",
+      "correct_answer": "Gordon Shumway",
+      "incorrect_answers": [
+        "Gordon Milipp",
+        "Gordon Foster",
+        "Gordon von Gam"
+      ]
+    },
+    {
+      "category": "Entertainment: Film",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What historical time period was the center of the Assassin&rsquo;s Creed movie (2016)?",
+      "correct_answer": "Spanish Inquisition",
+      "incorrect_answers": [
+        "Victorian England",
+        "French Revolution",
+        "Colonial America"
+      ]
+    }
+  ]
+}

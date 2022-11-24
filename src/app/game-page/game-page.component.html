@@ -2,11 +2,37 @@
   <div>
     <h2>Game Page</h2>
   </div>
+  <div class="gameContainer">
+    <div class="questionContainer">
+      <p>
+        {{triviaDataArr[currentQuestionIndex].question}}
+      </p>
+    </div>
 
+    <hr>
 
-    <button 
-      routerLink="/score-page"
-    >See My Score</button>
+    <div class="questionNumContainer">
+      <p>{{currentQuestionIndex + 1}} / {{triviaDataArr.length}}</p>
+    </div>
+
+    <hr>
+
+    <div class="optionsContainer">
+      <ul *ngFor="let option of OptionsArr[currentQuestionIndex]">
+        <li class="option" [ngClass]="{disabled: triviaEndMet === true, btnEffect: triviaEndMet === false}">
+          <button [disabled]="triviaEndMet === true" (click)="OnOptionClick($event)">{{option}}
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <button *ngIf="triviaEndMet === false; else scoreButton" routerLink="" (click)="onScoreButtonClick()">
+      Restart
+    </button>
+
+    <ng-template #scoreButton>
+      <button routerLink="/score-page" (click)="onScoreButtonClick()">See My Score</button>
+    </ng-template>
 
     <hr>
 
@@ -15,5 +41,7 @@
       <li><a routerLink="/">Welcome Page</a></li>
       <li><a routerLink="/score-page">Score Page</a></li>
     </ul>
+  </div>
+
 
 </div>

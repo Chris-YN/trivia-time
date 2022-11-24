@@ -6,13 +6,13 @@ import { Component, ElementRef, OnInit, Output, ViewChild, EventEmitter } from '
   styleUrls: ['./welcome-page.component.css']
 })
 export class WelcomePageComponent implements OnInit {
-  @ViewChild('userNameInput', {static:true}) userName:ElementRef;
+  userInput: string;
+  
   constructor() { }
-  @Output() playerName = new EventEmitter<string>;
 
   ngOnInit(): void {
   }
   onGameStart(){
-    this.playerName.emit(this.userName.nativeElement.value)
+    localStorage.setItem("userName", this.userInput);
   }
 }
